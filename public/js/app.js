@@ -11,6 +11,7 @@ var todoApp = {
     todoApp.categoryInput = document.querySelector('#category');
     todoApp.dateInput = document.querySelector('#date');
     todoApp.list = document.querySelector('#list');
+    console.log(todoApp);
   },
   render: function(){
    var listItemsFromTodos = todoApp.todos
