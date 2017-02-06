@@ -1,24 +1,27 @@
 var todoApp = {
   todos: [], //our data source/store
   init: function (){
-    this.cacheDom();
-    this.addEventListeners();
-    this.render();
+    todoApp.cacheDom();
+    todoApp.addEventListeners();
+    todoApp.render();
   },
   cacheDom: function(){
-    this.createButton = document.querySelector('#create');
-    this.taskInput = document.querySelector('#task');
+    todoApp.createButton = document.querySelector('#create');
+    todoApp.taskInput = document.querySelector('#task');
+    todoApp.categoryInput = document.querySelector('#category');
+    todoApp.dateInput = document.querySelector('#date');
     this.list = document.querySelector('#list');
   },
   render: function(){
-   var listItemsFromTodos = this.todos
+   var listItemsFromTodos = todoApp.todos
                                 .map(function(todo){
-                                 return '<li>'+ todo + '</li>';
+                                 return '<li>${todo.task}: (${todo.date}) [${todo.category}] </li>';
    })
-   this.list.innerHTML =listItemsFromTodos;
+   .join('');
+   todoApp.list.innerHTML =listItemsFromTodos;
    },
   addEventListeners: function(){
-    this.createButton.addEventListener('click', this.addTodo);
+    todoApp.createButton.addEventListener('click', todoApp.addTodo);
   },
   addTodo: function(){
     var taskValue = todoApp.taskInput.value; //specific to input field
@@ -26,6 +29,6 @@ var todoApp = {
     todoApp.render();
   }
   };
-  //console.log(todoApp);
+  console.log(todoApp);
   todoApp.init();
-  //console.log(todoApp);
+  console.log(todoApp);
