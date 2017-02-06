@@ -10,7 +10,7 @@ var todoApp = {
     todoApp.taskInput = document.querySelector('#task');
     todoApp.categoryInput = document.querySelector('#category');
     todoApp.dateInput = document.querySelector('#date');
-    this.list = document.querySelector('#list');
+    todoApp.list = document.querySelector('#list');
   },
   render: function(){
    var listItemsFromTodos = todoApp.todos
