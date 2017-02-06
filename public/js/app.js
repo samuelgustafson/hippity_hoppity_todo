@@ -30,6 +30,6 @@ var todoApp = {
     todoApp.render();
   }
   };
-  console.log(todoApp);
+  //console.log(todoApp);
   todoApp.init();
-  console.log(todoApp);
+  //console.log(todoApp);
