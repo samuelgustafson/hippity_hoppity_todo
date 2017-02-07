@@ -16,6 +16,7 @@ var todoApp = {
   render: function(){
    var listItemsFromTodos = todoApp.todos
                                 .map(function(todo){
+                                  console.log(todo);
                                  return `<li>${todo.task}: (${todo.date}) [${todo.category}]
                                  </li>`;
    })
